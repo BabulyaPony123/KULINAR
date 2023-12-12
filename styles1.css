@@ -1,0 +1,182 @@
+/* Общие стили */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+    font-family: Arial, sans-serif;
+    color: #333;
+    background-image: url('images/background1.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+/* Стили шапки */
+header {
+    position: relative;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+.header-content {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 10px;
+    margin-top: 25px;
+}
+
+/* Стили логотипа */
+.logo {
+    width: 90px;
+    height: auto;
+    position: absolute;
+    top: -30px;
+    left: 70px;
+}
+
+/* Стили навигации */
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: flex-end;
+    margin: 0;
+    align-items: center;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav a:hover {
+    text-decoration: none; /* Убирает подчеркивание при наведении */
+}
+/* Стили страницы рецептов */
+.recipes-page {
+    padding: 20px;
+    text-align: center;
+}
+
+.recipes-page h1 {
+    margin-bottom: 30px;
+    color: #333;
+}
+
+/* Стили карточек рецептов */
+.recipes-container {
+    display: flex; /* Включаем Flexbox */
+    flex-wrap: wrap; /* Позволяет элементам переноситься на следующую строку */
+    justify-content: space-around; /* Равномерное распределение карточек по горизонтали */
+    
+}
+.recipe {
+    width: 30%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 5px;
+    margin-right: 5px; 
+    background: rgb(254,249,236, 0.9);
+    padding: 10px; /*Расстояние картинки от границ */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /*Расстояние картинки от границ (пока что не работает)*/
+    text-align: left;
+    border-radius: 10px;
+}
+
+.recipe img {
+    width: 85%;
+    height: auto;
+    border-bottom: 1px solid #fff; /*под картинкой рецепта цвет */
+}
+
+.recipe h2 {
+    font-size: 18-px;
+    margin: 10px 0;
+}
+
+.recipe p {
+    color: #333;
+    font-size: 1.1rem;
+    line-height: 1;
+}
+
+.recipe a {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    margin-top: 10px;
+}
+
+.recipe a:hover {
+    background-color: #0056b3;
+}
+.modal {
+    display: none;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+    /* Добавление фона в модальное окно */
+    background-color: rgb(254,249,236, 0.9); /* Пример цвета фона */
+    /* Добавить изображение в качестве фона */
+    background-image: url('path/to/your/background-image.jpg'); /* Укажите путь к изображению */
+    background-size: cover; /* Размер фона */
+    background-repeat: no-repeat; /* Не повторять фон */
+    background-position: center; /* Расположение фона */
+}
+
+.modal-content {
+    background: rgb(255, 255, 255);
+    padding: 20px;
+    margin: 15% auto;
+    width: 60%;
+}
+.modal-content img {
+    max-width: 100%; /* Устанавливаем максимальную ширину изображения */
+    height: auto; /* Высота изменяется автоматически для сохранения пропорций */
+    display: block; /* Блочный элемент */
+    margin: 0 auto; /* Выравнивание по центру */
+    border-radius: 8px; /* Скругление углов изображения */
+}
+/* Отображение модального окна при целевом элементе */
+:target {
+    display: block;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+/* Стили футера */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: auto;
+    font-size: 0.9em;
+}
+footer p {
+    margin: 0;
+}

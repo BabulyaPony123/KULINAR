@@ -1,0 +1,157 @@
+/* Общие стили */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column; /* Устанавливаем колонный вид */
+    font-family: Arial, sans-serif;
+    color: #333;
+    background-image: url('images/background1.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    overflow-x: hidden; /* Скрывает горизонтальную прокрутку */
+    flex: 1; /* Занимает всё доступное пространство */
+}
+
+/* Работа с текстом и заголовком h1 + hr */
+main h1 {
+    text-align: center;
+    margin-left: 50px;
+}
+
+main p {
+    text-align: center; /* Выравниваем текст по центру */
+    margin-left: 50px;
+}
+
+main hr {
+    border: none;
+    height: 1px;
+    background-color: #ff0000;
+    margin: 20px 0; /* Отступ сверху и снизу линии */
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.logo-container {
+    top: 75px;
+    left: 80px;
+    z-index: 20;
+    width: 90px; /* Пример ширины, установите реальные размеры */
+    height: 0px; /* Пример высоты, установите реальные размеры */
+}
+
+.nav-container {
+    position: relative;
+    top: -55px;
+    right: 10px;
+    z-index: 10;
+}
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: flex-end; /* Размещение элементов справа */
+    margin: 0;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav a {
+    color: rgb(94, 10, 150); /* Цвет текста для контраста с баннером */
+    text-decoration: underline;
+}
+nav a:hover {
+    text-decoration: none; /* Убирает подчеркивание при наведении */
+}
+.logo {
+    
+    width: 90px; /* Изменено размер логотипа */
+    height: auto;
+    position: relative;
+    top: -96px;
+    left: 50px;
+}
+
+/* Категории */
+main {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+.categories-container {
+    display: flex;
+    flex-direction: column; /* Элементы идут друг за другом вертикально */
+    align-items: center; /* Горизонтальное выравнивание по центру */
+    justify-content: center; /* Вертикальное выравнивание по центру */
+    width: 100%; /* Ширина контейнера */
+}
+.category {
+    display: flex;
+    align-items: center;
+    background-color: #fff; /* Фон карточки */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Тень для карточки */
+    border-radius: 10px; /* Скругленные углы */
+    overflow: hidden; /* Обрезание содержимого по краям карточки */
+    width: 56%; /* Ширина карточки */
+    height: 350px; /* Высота карточки */
+    margin-bottom: 20px;
+    margin-right: 210px;
+    margin-top: -20px;
+}
+.category + .category {
+    margin-top: 20px;
+}
+.category img {
+    width: 50%; /* Или другой размер, подходящий под ваш дизайн */
+    margin-right: 20px;
+    height: 100%;
+    object-fit: cover; /* Обеспечиваем, чтобы изображения красиво заполняли пространство */
+    
+}
+
+.category-info {
+    flex:1;
+    padding: 0px;
+    width: 100%;
+
+
+}
+
+.category-info h2 {
+    margin-top: -32%;
+}
+
+.read-more {
+    display: inline-block;
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.read-more:hover {
+    background-color: #0056b3;
+}
+/* Стили футера */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0; /* Уменьшенные вертикальные отступы */
+    margin-top: auto;
+    font-size: 0.9em; /* Меньший размер шрифта, если необходимо */
+}
+
+footer p {
+    margin: 0; /* Удаление лишних отступов внутри футера */
+}
