@@ -57,9 +57,8 @@ html, body {
     
 }
 .slide a:hover {
-    text-decoration: none; /* Убирает подчёркивание при наведении */
+    text-decoration: none; 
 }
-
 .slide-radio1:checked ~ .slide1,
 .slide-radio2:checked ~ .slide2,
 .slide-radio3:checked ~ .slide3 {
@@ -81,12 +80,46 @@ html, body {
     transform: translateX(-50%);
     z-index: 5;
 }
+.slide-caption {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    font-size: 20px;
+    background-color: rgba(72, 205, 209, 0.6); /* Полупрозрачный черный фон */
+    color: white;
+    text-align: center;
+    padding: 10px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+.slide:hover .slide-caption {
+    opacity: 1;
+}
+/* Медиазапрос для мобильных устройств */
+@media screen and (max-width: 600px) {
+    .custom-hr {
+        margin: 10px 0;
+    }
+    .slideshow-container {
+        max-width: 100%;
+        padding-top: 66%; /* Примерное соотношение сторон 16:9 */
+    }
+    .slide-caption {
+        font-size: 16px;
+    }
+    .slideshow-controls .slide-control {
+        width: 15px;
+        height: 15px;
+        margin: 5px;
+    }
+}
 /* БОКОВАЯ МОДЕЛЬ МЕНЮ КАТЕГОРИИ */
 .sidebar {
     position: absolute;
-    top: 270px; /* Регулируйте положение по вертикали */
-    right: 10%; /* Регулируйте положение по горизонтали */
-    width: 250px; /* Ширина бокового меню */
+    top: 270px; 
+    right: 10%; 
+    width: 250px;
     height: 500px;
     background-color: #f9f9f9;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
@@ -98,7 +131,6 @@ html, body {
     display: flex; /* Элементы списка горизонтально */
     flex-direction: column; /* Вертикальное направление элементов списка */
 }
-
 .sidebar-nav ul li {
     padding: 10px;
     border-bottom: 1px solid #ddd; /* Граница между элементами списка */
@@ -179,29 +211,29 @@ main {
 }
 @media (max-width: 768px) {
     .main-title, .main-description {
-        margin-right: 0; /* Убираем отступы справа */
+        margin-right: 0; 
     }
 
     .category {
-        flex-direction: column; /* Элементы идут друг за другом вертикально */
-        width: 100%; /* Ширина категории 100% от ширины контейнера */
-        margin-right: 0; /* Убираем правый отступ */
-        height: auto; /* Высота автоматически подстраивается */
+        flex-direction: column; 
+        width: 100%; 
+        margin-right: 0; 
+        height: auto; 
     }
 
     .category img {
-        width: 100%; /* Ширина изображения на всю ширину категории */
-        margin-right: 0; /* Убираем правый отступ */
-        height: auto; /* Высота автоматически подстраивается */
+        width: 100%; 
+        margin-right: 0; 
+        height: auto; 
     }
 
     .category-info {
-        width: 100%; /* Ширина блока информации на 100% */
-        margin-top: 20px; /* Добавляем отступ сверху */
+        width: 100%; 
+        margin-top: 20px; 
     }
 
     .category-info h2 {
-        margin-top: 0; /* Сбрасываем отрицательный отступ сверху */
+        margin-top: 0; 
     }
 }
 /* Основные стили навигации */
@@ -289,7 +321,7 @@ nav a:hover {
         z-index: 1001;
     }
     nav ul li {
-        margin: 0; /* Обновленные стили для мобильной версии */
+        margin: 0; 
         padding: 10px 20px;
         width: auto;
         text-align: right;
@@ -328,12 +360,7 @@ nav a:hover {
     text-decoration: none;
 }
 
-/* Стили страницы рецептов */
-/* Заголовки пунктов в модальном окне */
-.recipes-page {
-    padding: 20px;
-    text-align: center;
-}
+/* СТИЛИ РЕЦЕПТОВ */
 /* Стили карточек рецептов */
 .recipes-container {
     display: flex;
@@ -374,20 +401,20 @@ nav a:hover {
 /* Медиа-запросы */
 @media (max-width: 768px) {
     .recipe {
-        width: 90%; /* Увеличиваем ширину карточек для мобильных устройств */
-        margin: 10px auto; /* Центрируем карточки и добавляем отступ сверху и снизу */
+        width: 90%; 
+        margin: 10px auto; 
     }
     .recipe img {
-        width: 100%; /* Изображения занимают всю ширину карточки */
+        width: 100%; 
     }
     .recipe h2 {
-        font-size: 16px; /* Немного уменьшаем размер заголовков */
+        font-size: 16px; 
     }
     .recipe p {
-        font-size: 1rem; /* Уменьшаем размер текста */
+        font-size: 1rem; 
     }
     .recipe a {
-        padding: 8px 16px; /* Уменьшаем размер кнопок */
+        padding: 8px 16px; 
     }
 }
 /* Модальные окна */
@@ -458,10 +485,12 @@ nav a:hover {
 .images-column {
     flex: 1;
     margin-right: 10px;
+
     /* Стили для колонки с картинками */
 }
 .description-column {
     flex: 2;
+
     /* Стили для колонки с описанием шагов */
 }
 :target {
@@ -478,6 +507,7 @@ nav a:hover {
 }
 .step p {
     flex: 1; 
+
     /* Другие стили для текста */
 }
 @media (max-width: 768px) {
@@ -520,7 +550,6 @@ nav a:hover {
 }
 .author-info {
     flex: 1;
-    
 }
 .social-networks {
     margin-top: 20px;
@@ -589,6 +618,22 @@ text-align: left;
 margin-right: 15%; 
 line-height: 1;
 margin-bottom: 5px;
+}
+@media screen and (max-width: 600px) {
+    .News-img {
+        width: 100%; 
+        margin-top: 0; 
+    }
+
+    .News-img img {
+        width: 100%; 
+        margin-left: auto; 
+        margin-right: auto; 
+    }
+
+    .main-titleNews {
+        margin-right: 5%; 
+    }
 }
 /* Стили футера */
 footer {
